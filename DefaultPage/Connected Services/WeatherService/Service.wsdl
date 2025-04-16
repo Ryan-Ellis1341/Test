@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar61.fulton.asu.edu/Page9/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar61.fulton.asu.edu/Page9/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar61.fulton.asu.edu/Page9/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_findStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:findStore" />
+  </wsdl:message>
+  <wsdl:message name="IService_findStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_FindAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService_FindAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getCrimeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCrimeData" />
+  </wsdl:message>
+  <wsdl:message name="IService_getCrimeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCrimeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_zipToState_InputMessage">
+    <wsdl:part name="parameters" element="tns:zipToState" />
+  </wsdl:message>
+  <wsdl:message name="IService_zipToState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zipToStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSolarData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolarData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSolarData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolarDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_monthToInt_InputMessage">
+    <wsdl:part name="parameters" element="tns:monthToInt" />
+  </wsdl:message>
+  <wsdl:message name="IService_monthToInt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:monthToIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetWeatherData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeatherData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetWeatherData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeatherDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ConvertToIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToIn" />
+  </wsdl:message>
+  <wsdl:message name="IService_ConvertToIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToInResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="findStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/findStore" message="tns:IService_findStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/findStoreResponse" message="tns:IService_findStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/FindAddress" message="tns:IService_FindAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/FindAddressResponse" message="tns:IService_FindAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCrimeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getCrimeData" message="tns:IService_getCrimeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getCrimeDataResponse" message="tns:IService_getCrimeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zipToState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/zipToState" message="tns:IService_zipToState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/zipToStateResponse" message="tns:IService_zipToState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSolarData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSolarData" message="tns:IService_GetSolarData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSolarDataResponse" message="tns:IService_GetSolarData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="monthToInt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/monthToInt" message="tns:IService_monthToInt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/monthToIntResponse" message="tns:IService_monthToInt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetWeatherData" message="tns:IService_GetWeatherData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetWeatherDataResponse" message="tns:IService_GetWeatherData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ConvertToIn" message="tns:IService_ConvertToIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ConvertToInResponse" message="tns:IService_ConvertToIn_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findStore">
+      <soap:operation soapAction="http://tempuri.org/IService/findStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAddress">
+      <soap:operation soapAction="http://tempuri.org/IService/FindAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCrimeData">
+      <soap:operation soapAction="http://tempuri.org/IService/getCrimeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zipToState">
+      <soap:operation soapAction="http://tempuri.org/IService/zipToState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolarData">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSolarData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="monthToInt">
+      <soap:operation soapAction="http://tempuri.org/IService/monthToInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeatherData">
+      <soap:operation soapAction="http://tempuri.org/IService/GetWeatherData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToIn">
+      <soap:operation soapAction="http://tempuri.org/IService/ConvertToIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://webstrar61.fulton.asu.edu/Page9/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
